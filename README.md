@@ -20,7 +20,7 @@
 
 * Windows: край эбоут ит
 
-### Билд(через СиМейк)
+### Билд(виа СиМейк)
 
 ``git submodule add https://github.com/stepzak/c_cli_lib.git <extrnal>/c_cli_lib``
 
