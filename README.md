@@ -16,7 +16,18 @@
 
 * Arch Linux: ``sudo pacman -S readline``
 
-* Fedora: `` sudo dnf install readline-devel``
+* Fedora: ``sudo dnf install readline-devel``
 
 * Windows: край эбоут ит
 
+### Билд(через СиМейк)
+
+``git submodule add https://github.com/stepzak/c_cli_lib.git <extrnal>/c_cli_lib``
+
+``#CMakeLists.txt``
+```
+add_subdirectory(<external>/c_cli_lib)
+
+add_executable(my_app main.c)
+target_link_libraries(my_app PRIVATE c_cli_lib)
+```
