@@ -21,9 +21,9 @@ void handle_help(cli_app_t* app, cli_result_t* res) {
         printf("%s: \t%s", cmd.name, cmd.help);
         if (cmd.args_count != 0) {
             printf(". Usage: %s", cmd.name);
-            for (size_t j = 0; j < app->cmds[i].args_count; j++) {
+            for (size_t j = 0; j < cmd.args_count; j++) {
                 char* arg_type;
-                arg_type_t arg = cmd.args_spec[i];
+                arg_type_t arg = cmd.args_spec[j];
                 switch (arg) {
                     case CLI_TYPE_DOUBLE: arg_type = "double"; break;
                     case CLI_TYPE_INT: arg_type = "int"; break;
