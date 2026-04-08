@@ -56,6 +56,8 @@ cli_app_t* cli_app_init(void* ctx, const cli_cmd_t* cmds, size_t cmds_count, cli
 
 void cli_app_destroy(cli_app_t* cli_app) {
     if (unlikely(!cli_app)) return;
-
+    clear_history();
+    rl_cleanup_after_signal();
+    rl_free_line_state();
     free(cli_app);
 }
